@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+ 
+    <title>来自 Electron 渲染器的问好！</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .top-bar {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            height: 5%;
+        }
+
+        .sidebar {
+            width: 15%;
+            box-sizing:border-box;
+            float: left; /* 让元素浮动到左侧 */
+            background-color: #f0f0f0;
+            padding: 10px;
+            box-shadow: 1px 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .tree {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .tree li {
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        .editor {
+            box-sizing:border-box;
+            width: 85%;
+            float: right; /* 让元素浮动到左侧 */
+            padding: 10px;
+            box-shadow: -1px 0 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 顶部按钮区域 -->
+    <div class="top-bar">
+        <button id="openButton">打开</button>
+        <button id="saveButton">保存 </button>
+        <button id="debugButton">调试</button>
+        <button id="runButton">运行</button>
+    </div>
+    <div>
+        <!-- 左侧的菜单树 -->
+        <div class="sidebar" >
+            <ul class="tree" id="tree">
+                <li>层级1
+                    <ul>
+                        <li>方法1</li>
+                        <li>方法2</li>
+                    </ul>
+                </li>
+                <li>层级2
+                    <ul>
+                        <li>方法3</li>
+                        <li>方法4</li>
+                    </ul>
+                </li>
+                <li>层级3
+                    <ul>
+                        <li>方法5</li>
+                        <li>方法6</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 右侧的文本编辑区域 -->
+        <div class="editor" id="editor" ></div>
+            <!-- 文本编辑区域内容将在脚本中填充 -->
+        </div>
+    </div>
+    </script>
+    <!-- 将 script 标签移到 body 内 -->
+
+
+</body>
+
+</html>
